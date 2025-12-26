@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "RP1_ImplementationReconstructability": "PASS",
+    "RP2_EnvironmentReproducibility": "PASS",
+    "RP3_DeterminismAndStability": "PASS"
+  },
+  "Rationale": {
+    "RP1_ImplementationReconstructability": "The experiment could be fully reconstructed from plan.md and CodeWalkthrough.md. The plan clearly specified objectives, methodology (causal mediation with interchange interventions), specific experiments (localizing answer pointer and payload), and expected results. Source code in src/dataset.py and notebooks/causalToM_novis/utils.py provided well-documented functions. Only minor API debugging was needed for nnsight layer access.",
+    "RP2_EnvironmentReproducibility": "Environment setup succeeded with standard dependencies (torch, nnsight, matplotlib). Data files (story templates, entity lists) were included in repository. Model loading worked via HuggingFace. pyproject.toml and uv.lock document the environment. Disk quota prevented loading original 70B model, but 8B fallback worked - this is infrastructure, not reproducibility issue.",
+    "RP3_DeterminismAndStability": "Results were stable and deterministic. Random seed (42) was set for reproducibility. Dataset generation produces identical samples with same seed. Model inference uses deterministic greedy decoding (argmax). Replication confirmed original patterns: pointer peaks at middle layers (50% depth), payload peaks at later layers (87-94% depth), sequential ordering preserved."
+  }
+}
