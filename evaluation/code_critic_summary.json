@@ -1,0 +1,30 @@
+{
+  "Runnable_Percentage": 94.06,
+  "Incorrect_Percentage": 0.0,
+  "Redundant_Percentage": 1.98,
+  "Irrelevant_Percentage": 1.98,
+  "Correction_Rate_Percentage": 0.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": false,
+    "Incorrect_Exists": false,
+    "Redundant_Exists": true,
+    "Irrelevant_Exists": true
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "PASS",
+    "C3_No_Redundant": "FAIL",
+    "C4_No_Irrelevant": "FAIL"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "6 blocks in lookback.ipynb have Runnable=N because they require external SVD files and have import error (env_utils should be global_utils)",
+    "C2_All_Correct": "All 101 implementations are logically correct",
+    "C3_No_Redundant": "2 empty cells in answer_lookback.ipynb are redundant",
+    "C4_No_Irrelevant": "2 empty cells in answer_lookback.ipynb are irrelevant"
+  },
+  "Special_Cases": {
+    "lookback.ipynb": "Requires singular vector files from external source (need to request from paper authors). Also has import error: uses env_utils instead of global_utils.",
+    "nnsight_framework": "All notebooks use nnsight framework for model intervention, which functions correctly."
+  }
+}

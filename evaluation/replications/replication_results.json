@@ -1,0 +1,87 @@
+{
+  "replication_date": "2026-01-07T23:07:40.533327",
+  "model_used": "meta-llama/Llama-3.1-8B-Instruct",
+  "original_model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "experiments": {
+    "answer_lookback_pointer": {
+      "description": "Tests where pointer information is stored (which state to retrieve)",
+      "iia_by_layer": {
+        "0": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "10": 0.0,
+        "12": 0.25,
+        "14": 0.33,
+        "16": 0.83,
+        "18": 0.83,
+        "20": 0.83,
+        "22": 0.42,
+        "24": 0.08,
+        "26": 0.0,
+        "28": 0.0,
+        "30": 0.0,
+        "31": 0.0
+      },
+      "peak_layer": 16,
+      "peak_iia": 0.83,
+      "original_peak_layers": "34-52 (in 80-layer model)"
+    },
+    "answer_lookback_payload": {
+      "description": "Tests where payload information is stored (actual state value)",
+      "iia_by_layer": {
+        "0": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "10": 0.0,
+        "12": 0.12,
+        "14": 0.12,
+        "16": 0.0,
+        "18": 0.0,
+        "20": 0.0,
+        "22": 0.0,
+        "24": 0.25,
+        "26": 0.62,
+        "28": 0.88,
+        "30": 1.0,
+        "31": 1.0
+      },
+      "peak_layer": 30,
+      "peak_iia": 1.0,
+      "original_peak_layers": "56+ (in 80-layer model)"
+    },
+    "binding_addr_and_payload": {
+      "description": "Tests where binding information is stored (character-object-state)",
+      "iia_by_layer": {
+        "0": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "10": 0.0,
+        "12": 0.38,
+        "14": 0.54,
+        "16": 0.38,
+        "18": 0.15,
+        "20": 0.15,
+        "22": 0.15,
+        "24": 0.0,
+        "26": 0.0,
+        "28": 0.0,
+        "30": 0.0,
+        "31": 0.0
+      },
+      "peak_layer": 14,
+      "peak_iia": 0.54,
+      "original_peak_layers": "33-38 (in 80-layer model)"
+    }
+  },
+  "notes": [
+    "Used smaller 8B model due to nnsight/PyTorch compatibility issues",
+    "Layer indices scale proportionally with model depth",
+    "Implemented using PyTorch hooks instead of nnsight tracing"
+  ]
+}

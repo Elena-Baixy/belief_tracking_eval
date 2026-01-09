@@ -1,0 +1,14 @@
+{
+  "Checklist": {
+    "RP1_ImplementationReconstructability": "PASS",
+    "RP2_EnvironmentReproducibility": "FAIL",
+    "RP3_DeterminismAndStability": "PASS",
+    "RP4_DemoPresentation": "NA"
+  },
+  "Rationale": {
+    "RP1_ImplementationReconstructability": "The experiment can be reconstructed from the plan.md and CodeWalkthrough.md. The plan clearly describes the hypothesis (lookback mechanism), methodology (interchange interventions, IIA metric), experiments (pointer, payload, binding lookbacks), and expected results. The notebooks contain complete working code. Minor inference required for token positions but documented in code.",
+    "RP2_EnvironmentReproducibility": "Environment could not be fully restored. The nnsight library was incompatible with PyTorch 2.9.1 causing FakeTensor errors. Required reimplementation using PyTorch hooks as workaround. The env.yml only contains API keys, not package versions. pyproject.toml lacks version constraints for nnsight/torch compatibility.",
+    "RP3_DeterminismAndStability": "Results are stable and reproducible. Random seeds are set (42 in replication, 10 in original). IIA patterns (pointer in middle layers, payload in later layers) are consistent. Experiment design uses aggregation over multiple samples, making it robust to sample-level variance.",
+    "RP4_DemoPresentation": "Repository does not contain explicit demo scripts or simplified demonstrations. Notebooks are full experimental implementations. Replication used full experimental methodology, not demo-only approach."
+  }
+}
