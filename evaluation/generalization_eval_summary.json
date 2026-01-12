@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "PASS",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "PASS"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "Tested on Llama-3-8B-Instruct (32 layers), a model NOT used in the original paper (which used Llama-3-70B-Instruct and Llama-3.1-405B-Instruct with 80 layers). Interchange interventions at late layers (24-31 out of 32, i.e., 75-97% of model depth) successfully demonstrated the answer payload localization pattern. At layer 31, patching with counterfactual hidden states shifted P(water)->0.00 and P(juice)->0.045, matching the original finding that late layers encode the answer payload. The proportional layer depth (75%) is consistent with the original paper's finding (70% at layer 56/80).",
+    "GT2_DataGeneralization": "Tested with three sets of completely novel entities not appearing in the original dataset: (1) Zara/Xander with kombucha/matcha, (2) Yuki/Paolo with boba/chai, (3) Mei/Raj with horchata/lassi. All character names, drink names were verified to be absent from the original entity lists. In all three trials, interchange intervention at late layers (24-31) successfully shifted probability from clean target to counterfactual target. For example, Trial 2 showed P(boba) dropping from 0.035 to 0.0002 while P(chai) increased from 0.0001 to 0.326 at layer 31.",
+    "GT3_MethodGeneralization": "Applied the interchange intervention methodology to a different but analogous task: location tracking (belief about where objects are placed) instead of content tracking (belief about what containers hold). Three trials tested with novel location-tracking prompts. All trials demonstrated the same layer localization pattern: early layers preserve clean target probability, late layers (24-31) enable successful probability shift to counterfactual target. For example, in Trial 1 (shelf vs desk), P(shelf)/P(desk) ratio inverted from 550x at layer 16 to 0.001x at layer 31, demonstrating the method's applicability to similar theory-of-mind tracking tasks."
+  }
+}
