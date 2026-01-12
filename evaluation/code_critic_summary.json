@@ -1,0 +1,26 @@
+{
+  "Runnable_Percentage": 98.88,
+  "Incorrect_Percentage": 1.12,
+  "Redundant_Percentage": 1.12,
+  "Irrelevant_Percentage": 2.25,
+  "Correction_Rate_Percentage": 0.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": true,
+    "Incorrect_Exists": true,
+    "Redundant_Exists": true,
+    "Irrelevant_Exists": true
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "FAIL",
+    "C3_No_Redundant": "FAIL",
+    "C4_No_Irrelevant": "FAIL"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "1 block(s) failed to execute: get_state_tracing_exps has a bug passing unexpected kwarg",
+    "C2_All_Correct": "1 block(s) have implementation errors: get_state_tracing_exps passes unexpected 'use_corrupt_question' argument",
+    "C3_No_Redundant": "1 block(s) are redundant: error_detection function is duplicated in causalToM_vis/utils.py",
+    "C4_No_Irrelevant": "2 block(s) are irrelevant: empty cells in answer_lookback.ipynb"
+  }
+}

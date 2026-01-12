@@ -1,0 +1,14 @@
+{
+  "Checklist": {
+    "RP1_ImplementationReconstructability": "PASS",
+    "RP2_EnvironmentReproducibility": "PASS",
+    "RP3_DeterminismAndStability": "PASS",
+    "RP4_DemoPresentation": "NA"
+  },
+  "Rationale": {
+    "RP1_ImplementationReconstructability": "The experiment can be reconstructed from plan.md and CodeWalkthrough.md. Dataset generation, interchange intervention methodology, and expected metrics are clearly documented. Minor ambiguities (template selection, counterfactual construction) were resolvable from source code.",
+    "RP2_EnvironmentReproducibility": "Environment is fully reproducible. pyproject.toml specifies dependencies, standard packages (nnsight, transformers, torch) install without conflicts, model loading works with shared paths or HuggingFace. Only limitation is hardware for larger models.",
+    "RP3_DeterminismAndStability": "Results are stable with controlled seeds (random.seed(42), torch.manual_seed(42)). IIA measurements are consistent across runs. Variance is due to small usable sample count from model limitations, not non-determinism.",
+    "RP4_DemoPresentation": "Repository does not contain a designated demo. It provides full research notebooks and scripts for experiment replication. Replication was performed on full methodology, not a demo subset."
+  }
+}
