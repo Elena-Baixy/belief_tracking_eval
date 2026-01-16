@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    "input",
+    "a9.h1",
+    "a10.h3",
+    "a7.h11",
+    "a11.h8"
+  ],
+  "metadata": {
+    "model": "gpt2-small",
+    "task": "successor_prediction",
+    "description": "Successor Heads circuit for ordinal sequence continuation",
+    "heads_detail": {
+      "a9.h1": {
+        "role": "primary_successor",
+        "avg_attribution": 14.95,
+        "attention_to_predecessor": 0.58,
+        "ablation_drop": 3.3
+      },
+      "a10.h3": {
+        "role": "calendar_successor",
+        "avg_attribution": 12.55,
+        "specialization": "days/months",
+        "ablation_drop_days": 16.7
+      },
+      "a7.h11": {
+        "role": "secondary_successor",
+        "avg_attribution": 10.32,
+        "attention_to_predecessor": 0.36,
+        "ablation_drop": 3.3
+      },
+      "a11.h8": {
+        "role": "output_successor",
+        "avg_attribution": 13.55,
+        "specialization": "letters",
+        "ablation_drop": 1.6
+      }
+    }
+  }
+}
