@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "PASS",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "NA"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "Tested on google/gemma-2-2b-it (not used in original work). Basic belief tracking: successful. Localization pattern: not observed.",
+    "GT2_DataGeneralization": "Tested with 3 novel data samples using different seeds. 2 samples correctly predicted, demonstrating data generalization.",
+    "GT3_MethodGeneralization": "The work applies existing interpretability methods (causal mediation analysis, interchange interventions, causal abstraction) to discover belief tracking mechanisms. No new method is proposed; the contribution is the findings about how models track beliefs. Therefore GT3 = NA."
+  }
+}

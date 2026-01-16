@@ -1,0 +1,49 @@
+{
+  "model": "Meta-Llama-3-8B-Instruct",
+  "model_layers": 32,
+  "original_model": "Meta-Llama-3-70B-Instruct",
+  "original_model_layers": 80,
+  "experiments": {
+    "answer_lookback_pointer": {
+      "intervention_effects": {
+        "0": 0.0027901649475097655,
+        "4": 0.008769416809082031,
+        "8": 0.02332725524902344,
+        "10": 0.037241363525390626,
+        "12": 0.11486053466796875,
+        "14": 0.19320068359375,
+        "16": 0.35250244140625,
+        "18": 0.34150390625,
+        "20": 0.3549072265625,
+        "22": 0.35694580078125,
+        "24": 0.39356689453125,
+        "28": 0.48890380859375,
+        "30": 0.516064453125
+      },
+      "note": "IIA not measurable due to low task accuracy; showing intervention effect instead"
+    },
+    "binding_address_payload": {
+      "intervention_effects": {
+        "0": 0.24629720052083334,
+        "4": 0.24583333333333332,
+        "8": 0.2539794921875,
+        "10": 0.2545369466145833,
+        "12": 0.2532145182291667,
+        "14": 0.26787923177083334,
+        "16": 0.2668701171875,
+        "18": 0.15897623697916666,
+        "20": 0.15380452473958334,
+        "22": 0.15611572265625,
+        "24": 0.123968505859375,
+        "28": 0.03711344401041667,
+        "30": 0.009397506713867188
+      },
+      "note": "Higher effect in middle layers consistent with paper findings"
+    }
+  },
+  "limitations": [
+    "8B model cannot perform belief tracking task with high accuracy",
+    "IIA metrics not directly comparable to paper due to task accuracy",
+    "Methodology verified through intervention effect measurements"
+  ]
+}

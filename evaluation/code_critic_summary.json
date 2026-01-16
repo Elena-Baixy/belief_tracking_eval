@@ -1,0 +1,32 @@
+{
+  "Runnable_Percentage": 99.05,
+  "Incorrect_Percentage": 0.0,
+  "Redundant_Percentage": 0.0,
+  "Irrelevant_Percentage": 0.0,
+  "Correction_Rate_Percentage": 0.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": false,
+    "Incorrect_Exists": false,
+    "Redundant_Exists": false,
+    "Irrelevant_Exists": false
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "PASS",
+    "C3_No_Redundant": "PASS",
+    "C4_No_Irrelevant": "PASS"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "1 block(s) have runnable issues: ['causalmodel_exps.ipynb']",
+    "C2_All_Correct": "All implementations are correct (no Correct-Implementation = N)",
+    "C3_No_Redundant": "No redundant code blocks found",
+    "C4_No_Irrelevant": "All code blocks are relevant to the project goal"
+  },
+  "Special_cases": {
+    "corrupted_notebooks": [
+      "notebooks/bigToM/causalmodel_exps.ipynb"
+    ],
+    "note": "The bigToM notebook file is corrupted (invalid JSON format) and cannot be executed. This affects reproducibility of the BigToM experiments."
+  }
+}
